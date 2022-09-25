@@ -1,0 +1,63 @@
+* {
+  margin:0; 
+  padding:0;
+}
+
+ul li {
+  list-style:none;
+}
+
+.clearfix:after{
+  content:'';
+  display:block; 
+  clear:both;
+}
+
+body {
+  background:green; 
+  overflow-y:scroll;
+  margin-top: 70px;
+}
+
+header {	
+	margin-top:20px;
+	background:linear-gradient(white 50px, rgba(255,255,255,0.5) 50px, rgba(255,255,255,0.5) );
+  /* 직선을 따라 두 개 이상의 색상 간의 점진적 전환으로 구성된 이미지를 만듭니다. */
+	height:50px; 
+	overflow:hidden;
+  transition: height .4s;
+  position: absolute; /* 안에있는 컨텐츠 크기만큼 자동으로 너비가 잡혀서 */
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav {
+  width:960px;
+  margin:0 auto;
+}
+
+nav > ul > li {
+  float:left; 
+  line-height:50px; 
+  padding: 0 35px;
+  /* margin-right:70px;  사이를 마진으로 주면 껄떡거림. 알아듣겠나? ㅋㅋ*/ 
+  position: relative;}
+
+nav > ul > li ul{ 
+  width:100%; 
+  display: none; 
+  position: absolute; /* 이얼 걸면 붕뜨니까 배경이 사라지는거임 */
+}
+
+nav > ul > li:hover ul{
+display: block;
+}
+
+nav > ul > li ul li{
+  white-space:nowrap;
+/* 속성은 요소 내부의 공백을 처리하는 방법을 설정  : nowrap은 공간제한으로 인한 자동줄바꿈을 허용하지 않는 속성*/
+}
+
+
+
